@@ -1,0 +1,21 @@
+
+      <pre>$location.path() = {{$location.path()}}</pre>
+      <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
+      <pre>$route.current.params = {{$route.current.params}}</pre>
+      <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
+      <pre>$routeParams = {{$routeParams}}</pre>
+
+
+      <md-toolbar class="md-accent">
+	<h2 class="md-toolbar-tools"><span>Meta</span></h2>
+</md-toolbar>
+
+<md-content class="md-padding">
+	<md-list>
+		<md-item ng-repeat="meta in tab.content.metas">
+			<md-item-content>
+	   	 		<div>{{meta.type}} {{meta.name}} {{meta.property}} {{meta.content}}</div>
+		    </md-item-content>
+		</md-item>
+	</md-list>
+</md-content>

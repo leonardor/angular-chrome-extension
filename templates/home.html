@@ -1,0 +1,53 @@
+<md-toolbar class="md-accent">
+	<h2 class="md-toolbar-tools"><span>Page</span></h2>
+</md-toolbar>
+
+<md-content class="md-padding">
+	<h3 class="md-primary">Title</h3>
+	<div data-ng-bind="tab.title"></div>
+</md-content>
+	
+<md-divider></md-divider>
+
+<md-content class="md-padding">
+	<h3 class="md-primary">Url</h3>
+	<div data-ng-bind="tab.url"></div>
+</md-content>
+
+<md-toolbar class="md-accent">
+	<h2 class="md-toolbar-tools"><span>Product</span></h2>
+</md-toolbar>
+
+<img src="{{data.info.image}}"/>
+	
+<md-content class="md-padding">
+	<h3 class="md-primary">Title</h3>
+	<div data-ng-bind-html="data.info.title"></div>
+</md-content>
+
+<md-divider></md-divider>
+
+<md-content class="md-padding">
+	<h3 class="md-primary">Price</h3>
+	<div data-ng-bind-html="data.info.price"></div>
+</md-content>
+
+<md-toolbar class="md-accent">
+	<h2 class="md-toolbar-tools"><span>Resealed</span></h2>
+</md-toolbar>
+
+<md-content class="md-padding">
+	<md-list>
+		<md-item ng-repeat="resealed in data.info.resealed track by $index">
+			<md-item-content>
+				<div class="md-tile-left">
+	            	<img ng-src="{{resealed.image}}" class="face"/>
+	          	</div>
+	          	<div class="md-tile-content">
+	   	 			<div data-ng-bind-html="resealed.price"></div>
+	   	 		</div>
+		    </md-item-content>
+		    <md-divider></md-divider>
+		</md-item>
+	</md-list>
+</md-content>

@@ -1,0 +1,11 @@
+body {
+	min-width: 350px;
+}
+
+a {
+	color: #000088;
+}
+
+a.selected {
+	color: #ff0000;
+}

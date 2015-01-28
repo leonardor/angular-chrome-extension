@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Test App",
+  "description": "Extensie pentru debugging",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "app.html"
+  },
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "unlimitedStorage",
+    "contextMenus",
+    "cookies",
+    "tabs",
+    "notifications",
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [ {
+    "js": [
+      "js/vendor/angular/angular.min.js",
+      "js/content.js",
+      "js/app.js"
+    ],
+    "matches": [ "*://*/*" ],
+    "run_at": "document_start"
+  }],
+  "web_accessible_resources": [
+      "templates/*",
+      "css/*",
+      "assets/*",
+      "js/*"
+  ],
+  "background": {
+    "scripts": [ "js/background.js" ]
+  }
+}
